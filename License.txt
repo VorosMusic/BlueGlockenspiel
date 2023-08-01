@@ -1043,8 +1043,8 @@ Section 8 -- Interpretation.
 
 CC+
 
-This license waives certain terms of the Creative Commons license above under specific circumstances. For the purposes of this license "Libre Wave samples" refers to any audio files in any format that are part of or included with a Libre Wave branded virtual instrument or effect plug-in.
+This license waives certain terms of the Creative Commons license above under specific circumstances. For the purposes of this license "Vörös Music samples" refers to any audio files in any format that are part of or included with a Vörös Music branded virtual instrument or effect plug-in.
 
-1: Permission is granted to the author of any musical work created with Libre Wave samples to release that work under any license they choose. For the purposes of this clause a musical work is defined as a stand-alone piece of music, it is not a single phrase, loop, note, chord, or sample, and it is not intended by its author to be used as the basis for derivative works.
+1: Permission is granted to the author of any musical work created with Vörös Music samples to release that work under any license they choose. For the purposes of this clause a musical work is defined as a stand-alone piece of music, it is not a single phrase, loop, note, chord, or sample, and it is not intended by its author to be used as the basis for derivative works.
 
-2: Permission is granted for musical loops or phrases created using Libre Wave samples to be distributed commercially either as audio files or as part of a virtual instrument. This waives the non-commercial clause of the CC license above. All other terms of the license still apply. For the purposes of this clause the terms loops and phrases refer to short compositions consisting of multiple notes, chords, and samples, that are intended to be used as the basis of derivative musical works.
+2: Permission is granted for musical loops or phrases created using Vörös Music samples to be distributed commercially either as audio files or as part of a virtual instrument. This waives the non-commercial clause of the CC license above. All other terms of the license still apply. For the purposes of this clause the terms loops and phrases refer to short compositions consisting of multiple notes, chords, and samples, that are intended to be used as the basis of derivative musical works.
