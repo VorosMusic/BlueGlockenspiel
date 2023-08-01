@@ -3,7 +3,7 @@ Blue Glockenspiel is the first sample instrument produced and released by Vörö
 
 This repository contains the HISE project, scripts, and image files for the Vörös Music "Blue Glockenspiel" virtual sample instrument.
 
-All of scripts contained in this project are released under the GPL v3 license, or a GPL compatible license (see LICENSE.md for details).
+All of scripts contained in this project are released under the GPL v3 license, or a GPL compatible license (see License.txt for details).
 
 If you want use this for your own project I would wish you'd change the UI to create a clear distinktion between yours and this release!
 
