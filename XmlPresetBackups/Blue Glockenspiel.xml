@@ -9,11 +9,14 @@
         <Processor Type="ScriptProcessor" ID="Main" Bypassed="0">
           <ChildProcessors/>
           <Content>
-            <Control type="ScriptSlider" id="Reverb" value="-19.39999961853027"/>
-            <Control type="ScriptSlider" id="Drive" value="0.05000000074505806"/>
-            <Control type="ScriptSlider" id="Spread" value="0.3600000143051147"/>
-            <Control type="ScriptButton" id="Extend" value="0.0"/>
+            <Control type="ScriptSlider" id="Reverb" value="-31.99999809265137"/>
+            <Control type="ScriptSlider" id="Drive" value="0.0"/>
+            <Control type="ScriptSlider" id="Spread" value="0.5"/>
             <Control type="ScriptButton" id="Switch" value="0.0"/>
+            <Control type="ScriptSlider" id="Tremolo" value="0.0"/>
+            <Control type="ScriptSlider" id="Phaser" value="0.0"/>
+            <Control type="ScriptSlider" id="Vibrato" value="0.0"/>
+            <Control type="ScriptButton" id="Extend" value="0.0"/>
             <Control type="ScriptButton" id="Settings_Btn" value="1.0"/>
           </Content>
           <UIData Source="Blue GlockenspielUIData"/>
@@ -28,8 +31,8 @@
     </Processor>
     <Processor Type="EffectChain" ID="FX" Bypassed="0">
       <ChildProcessors>
-        <Processor Type="Saturator" ID="Saturation" Bypassed="0" Saturation="0.05000000074505806"
-                   WetAmount="1.0" PreGain="0.0" PostGain="-0.5000001192092896">
+        <Processor Type="Saturator" ID="Saturation" Bypassed="0" Saturation="0.0"
+                   WetAmount="1.0" PreGain="0.0" PostGain="0.0">
           <ChildProcessors>
             <Processor Type="ModulatorChain" ID="Saturation Modulation" Bypassed="0"
                        Intensity="1.0">
@@ -38,10 +41,10 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="Convolution" ID="Reverb" Bypassed="0" DryGain="0.0" WetGain="-19.39999961853027"
+        <Processor Type="Convolution" ID="Reverb" Bypassed="0" DryGain="0.0" WetGain="-31.99999809265137"
                    Latency="0.0" ImpulseLength="1.0" ProcessInput="1.0" UseBackgroundThread="0.0"
-                   Predelay="0.0" HiCut="20000.0" Damping="0.0" FFTType="5.0" FileName="{PROJECT_FOLDER}Scala Milan Opera Hall.wav"
-                   min="0" max="88594" loopStart="0" loopEnd="88594">
+                   Predelay="0.0" HiCut="20000.0" Damping="0.0" FFTType="5.0" FileName="{PROJECT_FOLDER}Voros_Studio.wav"
+                   min="0" max="516000" loopStart="0" loopEnd="516000">
           <ChildProcessors/>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
@@ -65,7 +68,7 @@
                        UseTable="1.0" Inverted="0.0" DecibelMode="0.0" VelocityTableData="">
               <ChildProcessors/>
             </Processor>
-            <Processor Type="SimpleEnvelope" ID="Simple Envelope1" Bypassed="0" Monophonic="0.0"
+            <Processor Type="SimpleEnvelope" ID="Envelope R" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" Attack="0.0" Release="0.0" LinearMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
@@ -74,14 +77,42 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
+            <Processor Type="LFO" ID="Tremolo R" Bypassed="0" Intensity="0.0" Frequency="7.0"
+                       FadeIn="100.0" WaveformType="1.0" Legato="0.0" TempoSync="0.0"
+                       SmoothingTime="0.0" LoopEnabled="1.0" PhaseOffset="0.0" SyncToMasterClock="0.0"
+                       IgnoreNoteOn="0.0" CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="LFO Frequency Mod" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
           </ChildProcessors>
         </Processor>
         <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
-          <ChildProcessors/>
+          <ChildProcessors>
+            <Processor Type="LFO" ID="Vibrato R" Bypassed="0" Intensity="0.0" Bipolar="1"
+                       Frequency="3.5" FadeIn="750.0" WaveformType="1.0" Legato="0.0"
+                       TempoSync="0.0" SmoothingTime="50.0" LoopEnabled="1.0" PhaseOffset="0.0"
+                       SyncToMasterClock="0.0" IgnoreNoteOn="0.0" CustomWaveform=""
+                       StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="LFO Frequency Mod" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+          </ChildProcessors>
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="StereoFX" ID="Spread R" Bypassed="0" Pan="100.0" Width="36.0">
+            <Processor Type="StereoFX" ID="Spread R" Bypassed="0" Pan="100.0" Width="50.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Pan Modulation" Bypassed="0" Intensity="1.0">
                   <ChildProcessors>
@@ -92,6 +123,30 @@
                   </ChildProcessors>
                 </Processor>
               </ChildProcessors>
+            </Processor>
+            <Processor Type="PhaseFX" ID="Phaser R" Bypassed="0" Frequency1="4000.0"
+                       Frequency2="20.0" Feedback="0.0" Mix="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Phase Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors>
+                    <Processor Type="LFO" ID="Phase R" Bypassed="0" Intensity="1.0" ModulationMode="0"
+                               Frequency="5.5" FadeIn="500.0" WaveformType="1.0" Legato="0.0"
+                               TempoSync="0.0" SmoothingTime="0.0" LoopEnabled="1.0" PhaseOffset="0.0"
+                               SyncToMasterClock="0.0" IgnoreNoteOn="0.0" CustomWaveform=""
+                               StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
+                      <ChildProcessors>
+                        <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="LFO Frequency Mod" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                      </ChildProcessors>
+                    </Processor>
+                  </ChildProcessors>
+                </Processor>
+              </ChildProcessors>
+              <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
           </ChildProcessors>
         </Processor>
@@ -125,7 +180,7 @@
                        UseTable="1.0" Inverted="0.0" DecibelMode="0.0" VelocityTableData="">
               <ChildProcessors/>
             </Processor>
-            <Processor Type="SimpleEnvelope" ID="Simple Envelope2" Bypassed="0" Monophonic="0.0"
+            <Processor Type="SimpleEnvelope" ID="Envelope S" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" Attack="0.0" Release="0.0" LinearMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
@@ -134,14 +189,42 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
+            <Processor Type="LFO" ID="Tremolo S" Bypassed="0" Intensity="0.0" Frequency="6.0"
+                       FadeIn="100.0" WaveformType="1.0" Legato="0.0" TempoSync="0.0"
+                       SmoothingTime="0.0" LoopEnabled="1.0" PhaseOffset="0.0" SyncToMasterClock="0.0"
+                       IgnoreNoteOn="0.0" CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="LFO Frequency Mod" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
           </ChildProcessors>
         </Processor>
         <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
-          <ChildProcessors/>
+          <ChildProcessors>
+            <Processor Type="LFO" ID="Vibrato S" Bypassed="0" Intensity="0.0" Bipolar="1"
+                       Frequency="3.5" FadeIn="750.0" WaveformType="1.0" Legato="0.0"
+                       TempoSync="0.0" SmoothingTime="50.0" LoopEnabled="1.0" PhaseOffset="0.0"
+                       SyncToMasterClock="0.0" IgnoreNoteOn="0.0" CustomWaveform=""
+                       StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="LFO Frequency Mod" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+          </ChildProcessors>
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="StereoFX" ID="Spread S" Bypassed="0" Pan="100.0" Width="36.0">
+            <Processor Type="StereoFX" ID="Spread S" Bypassed="0" Pan="100.0" Width="50.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Pan Modulation" Bypassed="0" Intensity="1.0">
                   <ChildProcessors>
@@ -152,6 +235,30 @@
                   </ChildProcessors>
                 </Processor>
               </ChildProcessors>
+            </Processor>
+            <Processor Type="PhaseFX" ID="Phaser S" Bypassed="0" Frequency1="4000.0"
+                       Frequency2="20.0" Feedback="0.0" Mix="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Phase Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors>
+                    <Processor Type="LFO" ID="Phase S" Bypassed="0" Intensity="1.0" ModulationMode="0"
+                               Frequency="5.5" FadeIn="500.0" WaveformType="1.0" Legato="0.0"
+                               TempoSync="0.0" SmoothingTime="0.0" LoopEnabled="1.0" PhaseOffset="0.0"
+                               SyncToMasterClock="0.0" IgnoreNoteOn="0.0" CustomWaveform=""
+                               StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
+                      <ChildProcessors>
+                        <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="LFO Frequency Mod" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                      </ChildProcessors>
+                    </Processor>
+                  </ChildProcessors>
+                </Processor>
+              </ChildProcessors>
+              <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
           </ChildProcessors>
         </Processor>

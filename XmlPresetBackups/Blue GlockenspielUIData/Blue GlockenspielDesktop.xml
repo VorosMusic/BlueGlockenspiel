@@ -1,42 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ContentProperties DeviceType="Desktop">
-  <Component type="ScriptImage" id="Interface" x="0" y="0" fileName="{PROJECT_FOLDER}Interface.png"
-             width="1000" height="1500"/>
-  <Component type="ScriptPanel" id="Zoom_Pnl" x="0.0" y="0.0" height="850.0"
-             width="1000.0" allowCallbacks="All Callbacks" bgColour="0" itemColour="0"
+  <Component type="ScriptImage" id="UI" x="0" y="0" fileName="{PROJECT_FOLDER}UI.jpg"
+             width="1500" height="2400"/>
+  <Component type="ScriptPanel" id="Zoom_Pnl" x="0.0" y="0.0" height="1200.0"
+             width="1500.0" allowCallbacks="All Callbacks" bgColour="0" itemColour="0"
              itemColour2="0" textColour="0" popupOnRightClick="0" holdIsRightClick="0"
-             defaultValue="0.5"/>
-  <Component type="ScriptPanel" id="Cursor" x="0.0" y="0.0" width="1000.0"
-             height="700.0" bgColour="0" itemColour="0" itemColour2="0" textColour="0"/>
-  <Component type="ScriptSlider" id="Reverb" x="108.0" y="272.0" middlePosition="-25.0"
-             min="-100.0" max="-10.0" suffix=" dB" filmstripImage="{PROJECT_FOLDER}Knob 1.png"
-             numStrips="32.0" width="225.0" height="225.0" defaultValue="-20.0"
-             stepSize="0.1000000014901161" mode="Decibel"/>
-  <Component type="ScriptSlider" id="Drive" x="670.0" y="272.0" middlePosition="0.25"
-             suffix="%" mode="NormalizedPercentage" max="0.5" filmstripImage="{PROJECT_FOLDER}Knob 1.png"
-             numStrips="32.0" width="225.0" height="225.0"/>
-  <Component type="ScriptSlider" id="Spread" x="383.0" y="313.0" filmstripImage="{PROJECT_FOLDER}Knob 2.png"
-             numStrips="32.0" width="75.0" height="75.0" text="Intensity"
-             middlePosition="0.449999988079071" defaultValue="0.449999988079071"/>
-  <Component type="ScriptButton" id="Extend" x="410.0" y="547.0" filmstripImage="{PROJECT_FOLDER}Button.png"
-             width="180.0" height="50.0"/>
-  <Component type="ScriptButton" id="Switch" x="530.0" y="266.0" filmstripImage="{PROJECT_FOLDER}Switch.png"
-             width="100.0" height="230.0"/>
-  <Component type="ScriptFloatingTile" id="Keyboard" x="50.0" y="650.0" ContentType="Keyboard"
+             defaultValue="0.5" borderSize="0.0" borderRadius="0.0"/>
+  <Component type="ScriptPanel" id="Cursor" x="0.0" y="0.0" width="1500.0"
+             height="1140.0" bgColour="0" itemColour="0" itemColour2="0" textColour="0"
+             borderSize="0.0" borderRadius="0.0"/>
+  <Component type="ScriptPanel" id="Cursor_Bot" x="0.0" y="1100.0" width="1419.0"
+             height="100.0" bgColour="0" itemColour="0" itemColour2="0" textColour="0"
+             borderSize="0.0" borderRadius="0.0"/>
+  <Component type="ScriptSlider" id="Reverb" x="80.0" y="425.0" middlePosition="-25.0"
+             min="-100.0" max="-10.0" suffix=" dB" filmstripImage="{PROJECT_FOLDER}Reverb_Glow.png"
+             numStrips="64.0" width="350.0" height="330.0" defaultValue="-20.0"
+             stepSize="0.1000000014901161" mode="Decibel" showTextBox="0"/>
+  <Component type="ScriptSlider" id="Drive" x="1070.0" y="425.0" middlePosition="0.25"
+             suffix="%" mode="NormalizedPercentage" max="0.5" filmstripImage="{PROJECT_FOLDER}Reverb_Glow.png"
+             numStrips="64.0" width="350.0" height="330.0" showTextBox="0"/>
+  <Component type="ScriptSlider" id="Spread" x="583.0" y="441.0" width="120.0"
+             height="120.0" filmstripImage="{PROJECT_FOLDER}Spread.png" defaultValue="0.5"
+             numStrips="64.0" showTextBox="0"/>
+  <Component type="ScriptButton" id="Switch" x="780.0" y="445.0" width="190.0"
+             height="190.0" filmstripImage="{PROJECT_FOLDER}Switch.png"/>
+  <Component type="ScriptSlider" id="Tremolo" x="495.0" y="681.0" numStrips="64.0"
+             filmstripImage="{PROJECT_FOLDER}Spread.png" showTextBox="0" scaleFactor="0.75"
+             width="90.0" height="90.0"/>
+  <Component type="ScriptSlider" id="Phaser" x="705.0" y="681.0" showTextBox="0"
+             scaleFactor="0.75" filmstripImage="{PROJECT_FOLDER}Spread.png"
+             numStrips="64.0" width="90.0" height="90.0"/>
+  <Component type="ScriptSlider" id="Vibrato" x="916.0" y="681.0" showTextBox="0"
+             numStrips="64.0" scaleFactor="0.75" filmstripImage="{PROJECT_FOLDER}Spread.png"
+             width="90.0" height="90.0" max="0.1700000017881393"/>
+  <Component type="ScriptButton" id="Extend" x="520.0" y="845.0" filmstripImage="{PROJECT_FOLDER}Extend.png"
+             width="455.0" height="120.0"/>
+  <Component type="ScriptFloatingTile" id="Keyboard" x="81.0" y="1050.0" ContentType="Keyboard"
              bgColour="4284769380" itemColour="452984831" itemColour2="4294967295"
-             textColour="0" Data="{&#10;  &quot;KeyWidth&quot;: 32.2,&#10;  &quot;DisplayOctaveNumber&quot;: false,&#10;  &quot;LowKey&quot;: 53,&#10;  &quot;HiKey&quot;: 100,&#10;  &quot;CustomGraphics&quot;: true,&#10;  &quot;DefaultAppearance&quot;: false,&#10;  &quot;BlackKeyRatio&quot;: 0.65,&#10;  &quot;ToggleMode&quot;: false,&#10;  &quot;MidiChannel&quot;: 1,&#10;  &quot;UseVectorGraphics&quot;: true,&#10;  &quot;UseFlatStyle&quot;: false,&#10;  &quot;MPEKeyboard&quot;: false,&#10;  &quot;MPEStartChannel&quot;: 2,&#10;  &quot;MPEEndChannel&quot;: 16&#10;}"
-             width="900.0" height="100.0"/>
-  <Component type="ScriptPanel" id="Settings_Pnl" x="750.0" y="0.0" width="250.0"
-             height="350.0" bgColour="0" itemColour="0" itemColour2="0" textColour="0"
+             textColour="0" Data="{&#10;  &quot;KeyWidth&quot;: 48.0,&#10;  &quot;DisplayOctaveNumber&quot;: false,&#10;  &quot;LowKey&quot;: 53,&#10;  &quot;HiKey&quot;: 100,&#10;  &quot;CustomGraphics&quot;: true,&#10;  &quot;DefaultAppearance&quot;: false,&#10;  &quot;BlackKeyRatio&quot;: 0.65,&#10;  &quot;ToggleMode&quot;: false,&#10;  &quot;MidiChannel&quot;: 1,&#10;  &quot;UseVectorGraphics&quot;: true,&#10;  &quot;UseFlatStyle&quot;: false,&#10;  &quot;MPEKeyboard&quot;: false,&#10;  &quot;MPEStartChannel&quot;: 2,&#10;  &quot;MPEEndChannel&quot;: 16&#10;}"
+             width="1339.0" height="150.0"/>
+  <Component type="ScriptPanel" id="Settings_Pnl" x="1100.0" y="0.0" width="400.0"
+             height="600.0" bgColour="0" itemColour="0" itemColour2="0" textColour="0"
              visible="0.0">
-    <Component type="ScriptFloatingTile" id="Settings_Tl" x="3.0" y="0.0" parentComponent="Settings_Pnl"
-               width="243.0" height="350.0" ContentType="CustomSettings" bgColour="0"
-               itemColour="0" itemColour2="0" Data="{&#10;  &quot;Driver&quot;: true,&#10;  &quot;Device&quot;: true,&#10;  &quot;Output&quot;: true,&#10;  &quot;BufferSize&quot;: true,&#10;  &quot;SampleRate&quot;: true,&#10;  &quot;GlobalBPM&quot;: false,&#10;  &quot;StreamingMode&quot;: true,&#10;  &quot;ScaleFactor&quot;: false,&#10;  &quot;VoiceAmountMultiplier&quot;: true,&#10;  &quot;ClearMidiCC&quot;: true,&#10;  &quot;SampleLocation&quot;: true,&#10;  &quot;DebugMode&quot;: false,&#10;  &quot;UseOpenGL&quot;: false,&#10;  &quot;ScaleFactorList&quot;: [&#10;    0.5,&#10;    0.75,&#10;    1.0,&#10;    1.25,&#10;    1.5,&#10;    2.0&#10;  ]&#10;}"/>
+    <Component type="ScriptLabel" id="Settings_Lb" x="25.0" y="0.0" parentComponent="Settings_Pnl"
+               text="Settings" itemColour2="0" fontName="Oxygen" fontSize="60.0"
+               width="325.0" height="80.0" alignment="left" fontStyle="Bold"/>
+    <Component type="ScriptFloatingTile" id="Settings_Tl" x="20.0" y="80.0"
+               parentComponent="Settings_Pnl" width="380.0" height="520.0" ContentType="CustomSettings"
+               bgColour="0" itemColour="0" itemColour2="0" Data="{&#10;  &quot;Driver&quot;: true,&#10;  &quot;Device&quot;: true,&#10;  &quot;Output&quot;: true,&#10;  &quot;BufferSize&quot;: true,&#10;  &quot;SampleRate&quot;: true,&#10;  &quot;GlobalBPM&quot;: false,&#10;  &quot;StreamingMode&quot;: true,&#10;  &quot;ScaleFactor&quot;: false,&#10;  &quot;VoiceAmountMultiplier&quot;: true,&#10;  &quot;ClearMidiCC&quot;: true,&#10;  &quot;SampleLocation&quot;: true,&#10;  &quot;DebugMode&quot;: false,&#10;  &quot;UseOpenGL&quot;: false,&#10;  &quot;ScaleFactorList&quot;: [&#10;    0.5,&#10;    0.75,&#10;    1.0,&#10;    1.25,&#10;    1.5,&#10;    2.0&#10;  ]&#10;}"
+               FontSize="20.0" Font="Oxygen"/>
   </Component>
-  <Component type="ScriptPanel" id="Hand" x="950.0" y="0.0" width="50.0" bgColour="0"
-             itemColour="0" itemColour2="0" textColour="0" height="50.0">
-    <Component type="ScriptButton" id="Settings_Btn" x="0.0" y="0.0" width="50.0"
-               height="50.0" parentComponent="Hand"/>
+  <Component type="ScriptPanel" id="Hand" x="1415.0" y="0.0" width="85.0"
+             bgColour="0" itemColour="0" itemColour2="0" textColour="0" height="80.0">
+    <Component type="ScriptButton" id="Settings_Btn" x="0.0" y="0.0" width="85.0"
+               height="80.0" parentComponent="Hand"/>
   </Component>
 </ContentProperties>
